@@ -1,4 +1,3 @@
-
 function init()
 {
     function Timer(hours, minutes, seconds) {
@@ -16,7 +15,7 @@ function init()
         }
     }
 
-    const timer = new Timer('00', '00', '05')
+    const timer = new Timer('00', '25', '00')
     
     insertTime(timer)
 
@@ -28,7 +27,7 @@ function init()
     button_pause.addEventListener('click', () => { pause(timer) })
     button_stop.addEventListener('click', () => { stop(timer) })
 
-    endTimer(timer)
+    return timer
 }
 
 function start(timer)
@@ -72,7 +71,7 @@ function createButton(button_content)
     return button
 }
 
-function endTimer(timer, container_timer_class = 'pomodoro_timer',
+function finish(timer, container_timer_class = 'pomodoro_timer',
     where_insert_button_for_stop_alert = 'pomodoro_actions')
 {   
     function alertEndTimer(where_insert_button_class,
@@ -122,4 +121,5 @@ function insertTime({ hours, minutes, seconds }, container_timer_class = 'pomodo
     container_timer.innerHTML = `${hours}:${minutes}:${seconds}`
 }
 
-init()
+let timer = init()
+finish(timer)
