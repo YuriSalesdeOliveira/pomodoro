@@ -12,13 +12,14 @@ function Timer(timer_option = 'work_time') {
     this.minutes = time.minutes
     this.seconds = time.seconds
 
-    this.interval = null
+    this.interval = false
 
     this.reset = function (timer_option = null) {
         if (timer_option) time = this.timer_options[timer_option]
         this.hours = time.hours
         this.minutes = time.minutes
         this.seconds = time.seconds
+        this.interval = false
     }
 }
 
@@ -34,8 +35,24 @@ button_start.addEventListener('click', () => { start() })
 button_pause.addEventListener('click', () => { pause() })
 button_stop.addEventListener('click', () => { stop() })
 
+const alertAudio = {
+    audio: new Audio(),
+    enabled: false,
+    play: function(src) {
+        this.audio.src = src
+        this.audio.play()
+        this.enabled = true
+    },
+    pause: function() {
+        this.audio.pause()
+        this.enabled = false
+    }
+}
+
 function start()
 {
+    if (timer.interval || alertAudio.enabled) return
+
     function subtractOneSecond(timer)
     {
         const data = new Date()
@@ -58,6 +75,7 @@ function start()
 function pause()
 {
     clearInterval(timer.interval)
+    timer.interval = false
 }
 
 function stop()
@@ -94,11 +112,10 @@ timer_options.forEach((option) => {
     })
 })
 
-function alertEndTimer(where_insert_button_class,
+function alertEndTime(where_insert_button_class,
     src = 'https://toqueparacelular.com/download/?id=1006&post=1005')
 {
-    let audio = new Audio(src)
-    audio.play()
+    alertAudio.play(src)
 
     button_audio_stop = createButton('stop alert')
 
@@ -107,7 +124,7 @@ function alertEndTimer(where_insert_button_class,
 
     button_audio_stop.addEventListener('click', () => {
 
-        audio.pause()
+        alertAudio.pause()
 
         where_insert_button.removeChild(button_audio_stop)
     })
@@ -121,7 +138,7 @@ function handleMutationObserver( mutations ) {
 
             stop(timer)
 
-            alertEndTimer('pomodoro_actions')
+            alertEndTime('pomodoro_actions')
             
         }
     })
