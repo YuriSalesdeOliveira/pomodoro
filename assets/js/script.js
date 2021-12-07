@@ -1,4 +1,3 @@
-
 function Timer(timer_option = 'work_time') {
 
     this.timer_options = {
