@@ -6,7 +6,7 @@ Essa aplicação irá auxiliar no gerenciamento de tempo para aplicar a técnica
 
 ### Video
 
-Obs: O video está sem som, mas o alerta é feito através de audio que não foi capturado na gravação. Junto com o alerta também aparece o botão que finaliza o alerta.
+Obs: O video está sem som, mas o alerta é feito através de audio, que não foi capturado na gravação. Junto com o alerta também aparece o botão que finaliza o alerta.
 Nenhuma operação pode ser executada pelo usuário até que ele pare o alerta.
 
 <div>
