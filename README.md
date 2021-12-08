@@ -1,5 +1,5 @@
-# pomodoro
-Pomodoro é um técnica de gerenciamento de tempo. Criei essa aplicação para facilitar esse gerenciamento.
-A aplicação consiste em iniciar um contagem regressiva de 25min e alertar o usuário do fim da contagem.
-Adicionei funcionalidades simples, como, pausar, reiniciar a contagem, além da funcionalidade do usuário
-poder parar o alerta do fim da contagem.
+# Pomodoro
+
+O método Pomodoro é simples e dura duas horas. Primeiro, você realiza uma atividade durante 25 minutos.
+Quando acabar o tempo, descansa 5 minutos. Assim sucessivamente até que complete as duas horas.
+Essa aplicação irá auxiliar no gerenciamento de tempo para aplicar a técnica pomodoro.
