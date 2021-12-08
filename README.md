@@ -10,9 +10,5 @@ Obs: O video está sem som, mas o alerta é feito através de audio que não foi
 Nenhuma operação pode ser executada pelo usuário até que ele pare o alerta.
 
 <div>
-  <video src="https://user-images.githubusercontent.com/54549125/145273392-5496ef0b-4ed0-47de-8b09-9bc8402cbea8.mp4"  width="50%"controls="controls" autoplay="autoplay">
+  <video src="https://user-images.githubusercontent.com/54549125/145280670-e7a41b49-95d1-4cd3-942a-868c9dd9b63c.mp4"  width="50%"controls="controls" autoplay="autoplay">
 </div>
-
-
-
-
