@@ -118,6 +118,8 @@ function alertEndTime(where_insert_button_class,
     alertAudio.play(src)
 
     button_audio_stop = createButton('stop alert')
+    button_audio_stop.style.color = '#721c24'
+    button_audio_stop.style.backgroundColor = '#f8d7da'
 
     let where_insert_button = document.querySelector(`.${where_insert_button_class}`)
     where_insert_button.appendChild(button_audio_stop)
