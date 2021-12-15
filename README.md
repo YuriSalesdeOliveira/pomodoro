@@ -11,8 +11,3 @@ Obs: Junto com o alerta também aparece o botão que finaliza o alerta. Nenhuma 
 <div>
   <video src="https://user-images.githubusercontent.com/54549125/146134351-37a5e4d6-6eec-4379-b8a3-500855d96c09.mp4"  width="50%"controls="controls" autoplay="autoplay">
 </div>
-
-
-
-
-https://user-images.githubusercontent.com/54549125/145280670-e7a41b49-95d1-4cd3-942a-868c9dd9b63c.mp4
